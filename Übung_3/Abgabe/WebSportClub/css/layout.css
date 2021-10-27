@@ -14,4 +14,11 @@ body {
 
 .my-jumbotron {
     background-color: #cde1f5 !important;
+    padding-bottom: 1rem;
+}
+
+.my-jumbotron-sub {
+    background-color: #cde1f5 !important;
+    padding-bottom: 1rem;
+    font-size: 14px;
 }
