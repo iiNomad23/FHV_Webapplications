@@ -6,17 +6,136 @@
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
+    <meta name="description" content="Search and find famous players and tournaments">
+
     <title>WebSportClub</title>
 
     <!-- ############ import css files ########################################################################################################################### -->
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/print.css">
+
+    <!-- ############ import js lib files ######################################################################################################################## -->
+
+    <script src="./js/bootstrap.min.js"></script>
 </head>
 
-<body oncontextmenu="return false;">
-<div> TestTest
-</div>
-</body>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><i class="fa fa-soccer-ball-o"></i> WebSportClub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/climbing_club.html">Climbing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/mountainBiking_club.html">Mountain biking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/friendlyFire_eSport_club.html">Friendly Fire</a>
+            </li>
+        </ul>
+
+        <!-- eMail -->
+        <ul class="navbar-nav right">
+            <li class="nav-item">
+                <a class="nav-link" href="mailto:thisIsAEmail@hotmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main">
+
+    <!-- header -->
+    <div class="jumbotron my-jumbotron">
+        <div class="container">
+            <h1 class="display-3">Welcome to the WebSportClub</h1>
+            <p>Here you will find some information about some clubs with its members and some exiting tournament results.<br> And some text which is useless because I do not have some real useful information or my imagination is just too bad but I hope this is enough for the welcome text.</p>
+        </div>
+    </div>
+
+    <!-- overview/main information -->
+<!--    <div class="container">-->
+<!--        &lt;!&ndash; Angebotene Medien &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <h3>Angebotene Medien</h3>-->
+<!--                <hr>-->
+<!--                <p>Folgende Medien-Typen stehen in der SimpleLibrary zur Auswahl:</p>-->
+<!--                <ul>-->
+<!--                    <li><a href="media/books.html">Bücher</a></li>-->
+<!--                    <li><a href="media/newspapers.html">Zeitungen</a></li>-->
+<!--                    <li><a href="media/audio.html">Hörspiele</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Allgemeine Informationen &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--            &lt;!&ndash; Gebühren &ndash;&gt;-->
+<!--            <div class="col-md-4">-->
+<!--                <h3>Gebühren</h3>-->
+<!--                <hr>-->
+<!--                <p><b>Mitgliedschaft - Erwachsener:</b>-->
+<!--                    Montaskarte: 3€-->
+<!--                    Jahreskarte: 30€-->
+<!--                </p>-->
+<!--                <p><b>Mitgliedschaft - Kind:</b>-->
+<!--                    Montaskarte: 1,5€-->
+<!--                    Jahreskarte: 15€-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Öffnungszeiten &ndash;&gt;-->
+<!--            <div class="col-md-4">-->
+<!--                <h3>Öffnungszeiten</h3>-->
+<!--                <hr>-->
+<!--                <p><b>Montag - Donnerstag:</b>-->
+<!--                    08:00 - 12:00 Uhr-->
+<!--                    13:00 - 18:00 Uhr-->
+<!--                </p>-->
+<!--                <p><b>Freitag & Samstag:</b>-->
+<!--                    08:00 - 13:00 Uhr-->
+<!--                </p>-->
+<!--                <p><b>Sonntag & Feiertage:</b>-->
+<!--                    Geschlossen-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Kontakt &ndash;&gt;-->
+<!--            <div class="col-md-4">-->
+<!--                <h3>Kontakt</h3>-->
+<!--                <hr>-->
+<!--                <p><b>Adresse:</b>-->
+<!--                    SimpleLibrary GmbH-->
+<!--                    Eine Straße 1-->
+<!--                    0000 Musterstadt-->
+<!--                    Österreich-->
+<!--                </p>-->
+<!--                <p><b>Tel:</b> +43 0000 123456789-->
+<!--                    <b>E-Mail:</b> thisIsAEmail@hotmail.com-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+</main>
+
+<!-- footer -->
+<footer class="container">
+    <hr>
+    <p>&copy; WebSportClub 2021</p>
+</footer>
+
+</body>
 </html>
