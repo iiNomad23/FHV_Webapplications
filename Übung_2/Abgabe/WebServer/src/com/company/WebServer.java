@@ -33,7 +33,7 @@ public class WebServer {
                 writer.write("Content-Length: " + file.length() + "\r\n");
             }
 
-            writer.write("Content-Type: text/html\r\n\r\n");
+            writer.write("\r\n\r\n");
         } catch (IOException e) {
             System.out.println("Error writing HTTP header: " + e.getMessage());
             System.out.println("Exiting...");
