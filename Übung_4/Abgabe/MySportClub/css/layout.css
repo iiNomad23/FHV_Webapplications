@@ -30,6 +30,25 @@ td {
     border-color: rgba(255, 255, 255, .1);
 }
 
+.my-btn-primary {
+    background-color: #4b86fc;
+    color: white;
+}
+
+.my-btn-secondary {
+    background-color: #8d8d8d;
+    color: white;
+}
+.my-btn-primary:hover, .my-btn-secondary:hover {
+    color: white;
+    border-radius: 0;
+}
+
+.accountButton {
+    float: right;
+    margin: 5px;
+}
+
 .subHeader {
     float: right;
     font-size: 14px;
