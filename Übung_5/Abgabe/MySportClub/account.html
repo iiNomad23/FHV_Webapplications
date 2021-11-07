@@ -90,7 +90,8 @@
 
     <!-- overview/main information -->
     <div class="container">
-        <form action="mailto:marco.prescher@students.fhv.at" method="post" novalidate enctype="text/plain" onsubmit="return submitFrom()">
+        <form action="mailto:marco.prescher@students.fhv.at" method="post" novalidate enctype="text/plain"
+              onsubmit="return validateInputs()">
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="firstName">First name *</label>
@@ -123,16 +124,16 @@
             <div class="form-group">
                 <label>Gender *</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="maleSex" value="male">
-                    <label class="form-check-label" for="maleSex">Male</label>
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="femaleSex" value="female">
-                    <label class="form-check-label" for="femaleSex">Female</label>
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="diverseSex" value="diverse">
-                    <label class="form-check-label" for="diverseSex">Divers</label>
+                    <input class="form-check-input" type="radio" name="gender" id="diverse" value="diverse">
+                    <label class="form-check-label" for="diverse">Divers</label>
                 </div>
             </div>
 
@@ -149,7 +150,7 @@
                 </div>
                 <div class="col-md mb-3">
                     <label for="mobileNumber">Mobile Number</label>
-                    <input type="text" class="form-control" name="email" id="mobileNumber">
+                    <input type="text" class="form-control" name="mobileNumber" id="mobileNumber">
                 </div>
             </div>
             <div class="form-group">
@@ -169,7 +170,7 @@
 
             <div class="form-group">
                 <label for="sportCategories">Sport Categories *</label>
-                <select multiple class="form-control" id="sportCategories" name="category">
+                <select multiple class="form-control" id="sportCategories" name="sportCategory">
                     <option>Climbing</option>
                     <option>Cycling</option>
                     <option>Friendly Fire</option>
@@ -180,16 +181,17 @@
                 <label>User Categories *</label><br>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="athleteRole" value="athlete">
-                    <label class="form-check-label" for="athleteRole">Athlete</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="athlete" value="athlete">
+                    <label class="form-check-label" for="athlete">Athlete</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="organizerRole" value="organizer">
-                    <label class="form-check-label" for="organizerRole">Organizer</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="organizer"
+                           value="organizer">
+                    <label class="form-check-label" for="organizer">Organizer</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="adminRole" value="admin">
-                    <label class="form-check-label" for="adminRole">Admin</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="admin" value="admin">
+                    <label class="form-check-label" for="admin">Admin</label>
                 </div>
             </div>
 
