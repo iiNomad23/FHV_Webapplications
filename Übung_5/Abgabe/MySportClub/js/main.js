@@ -67,21 +67,37 @@ function validateStandardInputs(elemObj) {
 }
 
 function validateRadios() {
-    let radioEls = document.querySelectorAll('input[name="gender"]');
+    let radioElArr = document.querySelectorAll('input[name="gender"]');
+    let isValid = document.querySelectorAll('input[name="gender"]:checked').length > 0;
 
-    let checked = false;
-    for (const el of radioEls) {
-        if (el.checked) {
-            checked = true;
-            break;
-        }
+    for (let i = 0; i < radioElArr.length; i++) {
+        setVisualValidation(radioElArr[i], isValid);
     }
 
-    return checked;
+    setCustomValidation(document.getElementById("gender-feedback"), isValid);
+
+    return isValid;
 }
 
 function validateCheckBoxes() {
-    return document.querySelectorAll('input[name="userCategory"]:checked').length > 0;
+    let checkElArr = document.querySelectorAll('input[name="userCategory"]');
+    let isValid = document.querySelectorAll('input[name="userCategory"]:checked').length > 0;
+
+    for (let i = 0; i < checkElArr.length; i++) {
+        let el = checkElArr[i];
+
+        if (isValid) {
+            el.removeAttribute("required");
+        } else {
+            el.setAttribute("required", "");
+        }
+
+        setVisualValidation(el, isValid);
+    }
+
+    setCustomValidation(document.getElementById("sportCategories-feedback"), isValid);
+
+    return isValid;
 }
 
 //#endregion
@@ -93,8 +109,8 @@ function validateString(str, regex) {
 
 function validateUserID(el) {
     let regex = /^[a-zA-Z_]{5,9}$/;
-
     let isValid = validateString(el.value, regex);
+
     setVisualValidation(el, isValid);
 
     return isValid;
@@ -102,8 +118,8 @@ function validateUserID(el) {
 
 function validatePassword(elPass, elPassConf) {
     let regex = /^[a-zA-Z][a-zA-Z0-9_]{8,9}$/;
-
     let isValid = validateString(elPass.value, regex) && elPass.value === elPassConf.value;
+
     setVisualValidation(elPass, isValid);
     setVisualValidation(elPassConf, isValid);
 
@@ -112,8 +128,8 @@ function validatePassword(elPass, elPassConf) {
 
 function validateEmail(el) {
     let regex = /^[a-zA-Z](\.?[\w-]+)*@(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9]){3,63}\.[a-zA-Z]{2,4}$/;
-
     let isValid = validateString(el.value, regex);
+
     setVisualValidation(el, isValid);
 
     return isValid;
@@ -132,5 +148,13 @@ function setVisualValidation(el, isValid) {
     } else {
         el.classList.remove("is-valid");
         el.classList.add("is-invalid");
+    }
+}
+
+function setCustomValidation(el, isValid) {
+    if (isValid) {
+        el.classList.remove("displayBlock");
+    } else {
+        el.classList.add("displayBlock");
     }
 }
