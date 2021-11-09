@@ -4,27 +4,20 @@
 
 
 function validateInputs() {
-    let textElemObj = {
+    let elObj = {
         firstNameEl: document.getElementById("firstName"),
         lastNameEl: document.getElementById("lastName"),
         addressEl: document.getElementById("address"),
+        countryEl: document.getElementById("country"),
         userIDEl: document.getElementById("userID"),
         emailEl: document.getElementById("email"),
         passwordEl: document.getElementById("password"),
         confirmPasswordEl: document.getElementById("confirmPassword"),
-    };
-
-    let selectElemObj = {
-        countryEl: document.getElementById("country"),
         sportCategoriesEl: document.getElementById("sportCategories"),
     };
 
     // default checks --------------------------------------------------------------------------------------------------
-    if (!validateTextInputs(textElemObj)) {
-        return false;
-    }
-
-    if (!validateSelectInputs(selectElemObj)) {
+    if (!validateStandardInputs(elObj)) {
         return false;
     }
 
@@ -38,15 +31,15 @@ function validateInputs() {
 
 
     // extended checks -------------------------------------------------------------------------------------------------
-    if (!validateUserID(textElemObj.userIDEl)) {
+    if (!validateUserID(elObj.userIDEl)) {
         return false;
     }
 
-    if (!validatePassword(textElemObj.passwordEl, textElemObj.confirmPasswordEl)) {
+    if (!validatePassword(elObj.passwordEl, elObj.confirmPasswordEl)) {
         return false;
     }
 
-    if (!validateEmail(textElemObj.emailEl)) {
+    if (!validateEmail(elObj.emailEl)) {
         return false;
     }
 
@@ -54,7 +47,7 @@ function validateInputs() {
 }
 
 //#region default checks functions -------------------------------------------------------------------------------------
-function validateTextInputs(elemObj) {
+function validateStandardInputs(elemObj) {
     for (const elemObjKey in elemObj) {
         let el = elemObj[elemObjKey];
 
@@ -68,23 +61,6 @@ function validateTextInputs(elemObj) {
         if (el.id !== "userID" && el.id !== "email" && el.id !== "password" && el.id !== "confirmPassword") {
             setVisualValidation(el, true);
         }
-    }
-
-    return true;
-}
-
-function validateSelectInputs(elemObj) {
-    for (const elemObjKey in elemObj) {
-        let el = elemObj[elemObjKey];
-
-        if (el.value == null || el.value === "") {
-            setVisualValidation(el, false);
-            el.focus();
-
-            return false;
-        }
-
-        setVisualValidation(el, true);
     }
 
     return true;
@@ -136,7 +112,7 @@ function validatePassword(elPass, elPassConf) {
 
 function validateEmail(el) {
     let regex = /^[a-zA-Z](\.?[\w-]+)*@(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9]){3,63}\.[a-zA-Z]{2,4}$/;
-    
+
     let isValid = validateString(el.value, regex);
     setVisualValidation(el, isValid);
 
