@@ -46,7 +46,7 @@ function validateInputs() {
     return true;
 }
 
-//#region default checks functions -------------------------------------------------------------------------------------
+//#region default check functions --------------------------------------------------------------------------------------
 function validateStandardInputs(elemObj) {
     for (const elemObjKey in elemObj) {
         let el = elemObj[elemObjKey];
@@ -102,7 +102,7 @@ function validateCheckBoxes() {
 
 //#endregion
 
-//#region extended checks functions ------------------------------------------------------------------------------------
+//#region extended check functions -------------------------------------------------------------------------------------
 function validateString(str, regex) {
     return regex.exec(str) !== null;
 }
@@ -137,6 +137,7 @@ function validateEmail(el) {
 
 //#endregion
 
+//#region visual feedback functions ------------------------------------------------------------------------------------
 function setVisualValidation(el, isValid) {
     if (el == null) {
         return;
@@ -158,3 +159,5 @@ function setCustomValidation(el, isValid) {
         el.classList.add("displayBlock");
     }
 }
+
+//#endregion
