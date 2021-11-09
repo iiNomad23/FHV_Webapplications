@@ -11,17 +11,21 @@ function validateInputs() {
         countryEl: document.getElementById("country"),
         userIDEl: document.getElementById("userID"),
         emailEl: document.getElementById("email"),
-        passwordEl: document.getElementById("password"),
-        confirmPasswordEl: document.getElementById("confirmPassword"),
-        sportCategoriesEl: document.getElementById("sportCategories"),
+        passEl: document.getElementById("password"),
+        confirmPassEl: document.getElementById("confirmPassword"),
+        sportCatEl: document.getElementById("sportCategories"),
     };
 
     // default checks --------------------------------------------------------------------------------------------------
-    if (!validateStandardInputs(elObj)) {
+    if (!validateStandardElems([elObj.firstNameEl, elObj.lastNameEl, elObj.addressEl, elObj.countryEl])) {
         return false;
     }
 
     if (!validateRadios()) {
+        return false;
+    }
+
+    if (!validateStandardElems([elObj.userIDEl, elObj.emailEl, elObj.passEl, elObj.confirmPassEl, elObj.sportCatEl])) {
         return false;
     }
 
@@ -35,7 +39,7 @@ function validateInputs() {
         return false;
     }
 
-    if (!validatePassword(elObj.passwordEl, elObj.confirmPasswordEl)) {
+    if (!validatePassword(elObj.passEl, elObj.confirmPassEl)) {
         return false;
     }
 
@@ -47,9 +51,9 @@ function validateInputs() {
 }
 
 //#region default check functions --------------------------------------------------------------------------------------
-function validateStandardInputs(elemObj) {
-    for (const elemObjKey in elemObj) {
-        let el = elemObj[elemObjKey];
+function validateStandardElems(elemArr) {
+    for (let i = 0; i < elemArr.length; i++) {
+        let el = elemArr[i];
 
         if (el.value == null || el.value === "") {
             setVisualValidation(el, false);
