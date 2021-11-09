@@ -23,7 +23,7 @@
     <!-- ############ import js lib files ######################################################################################################################## -->
 
     <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script src="./js/bootstrap.min.js"></script>-->
 
     <!-- ############ import js src files ######################################################################################################################## -->
 
@@ -96,10 +96,12 @@
                 <div class="col-md mb-3">
                     <label for="firstName">First name *</label>
                     <input type="text" class="form-control" name="firstName" id="firstName" placeholder="John">
+                    <div class="invalid-feedback">Please provide a valid first name.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="lastName">Surname *</label>
                     <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Doe">
+                    <div class="invalid-feedback">Please provide a valid last name.</div>
                 </div>
             </div>
 
@@ -107,6 +109,7 @@
                 <div class="col-md mb-3">
                     <label for="address">Address *</label>
                     <textarea class="md-textarea form-control" name="address" id="address" rows="3"></textarea>
+                    <div class="invalid-feedback">Please provide a valid address.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="country">Country *</label>
@@ -118,22 +121,24 @@
                         <option>Germany</option>
                         <option>others</option>
                     </select>
+                    <div class="invalid-feedback">Please select a country.</div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Gender *</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
                     <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
                     <label class="form-check-label" for="female">Female</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="diverse" value="diverse">
+                    <input class="form-check-input" type="radio" name="gender" id="diverse" value="diverse" required>
                     <label class="form-check-label" for="diverse">Divers</label>
+                    <div class="invalid-feedback">Please select a gender.</div>
                 </div>
             </div>
 
@@ -142,11 +147,13 @@
             <div class="form-group">
                 <label for="userID">Your User-ID *</label>
                 <input type="text" class="form-control" name="userID" id="userID" placeholder="john.doe">
+                <div class="invalid-feedback">Please provide a valid userID.</div>
             </div>
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="email">E-Mail *</label>
                     <input type="text" class="form-control" name="email" id="email" placeholder="john.doe@email.com">
+                    <div class="invalid-feedback">Please provide a valid email.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="mobileNumber">Mobile Number</label>
@@ -161,10 +168,12 @@
                 <div class="col-md mb-3">
                     <label for="password">Password *</label>
                     <input type="password" class="form-control" name="password" id="password">
+                    <div class="invalid-feedback">Please provide a valid password.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="confirmPassword">Confirm Password *</label>
                     <input type="password" class="form-control" id="confirmPassword">
+                    <div class="invalid-feedback">Please provide a valid confirmation password.</div>
                 </div>
             </div>
 
@@ -175,6 +184,7 @@
                     <option>Cycling</option>
                     <option>Friendly Fire</option>
                 </select>
+                <div class="invalid-feedback">Please select a sport category.</div>
             </div>
 
             <div class="form-group">
@@ -192,6 +202,7 @@
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="userCategory" id="admin" value="admin">
                     <label class="form-check-label" for="admin">Admin</label>
+                    <div class="invalid-feedback">Please select a user category.</div>
                 </div>
             </div>
 

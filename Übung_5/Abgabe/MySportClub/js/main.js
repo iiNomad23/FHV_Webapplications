@@ -19,7 +19,6 @@ function validateInputs() {
         sportCategoriesEl: document.getElementById("sportCategories"),
     };
 
-
     // default checks --------------------------------------------------------------------------------------------------
     if (!validateTextInputs(textElemObj)) {
         return false;
@@ -39,15 +38,15 @@ function validateInputs() {
 
 
     // extended checks -------------------------------------------------------------------------------------------------
-    if (!validateUserID(textElemObj.userIDEl.value)) {
+    if (!validateUserID(textElemObj.userIDEl)) {
         return false;
     }
 
-    if (!validatePassword(textElemObj.passwordEl.value, textElemObj.confirmPasswordEl.value)) {
+    if (!validatePassword(textElemObj.passwordEl, textElemObj.confirmPasswordEl)) {
         return false;
     }
 
-    if (!validateEmail(textElemObj.emailEl.value)) {
+    if (!validateEmail(textElemObj.emailEl)) {
         return false;
     }
 
@@ -60,7 +59,14 @@ function validateTextInputs(elemObj) {
         let el = elemObj[elemObjKey];
 
         if (el.value == null || el.value === "") {
+            setVisualValidation(el, false);
+            el.focus();
+
             return false;
+        }
+
+        if (el.id !== "userID" && el.id !== "email" && el.id !== "password" && el.id !== "confirmPassword") {
+            setVisualValidation(el, true);
         }
     }
 
@@ -72,8 +78,13 @@ function validateSelectInputs(elemObj) {
         let el = elemObj[elemObjKey];
 
         if (el.value == null || el.value === "") {
+            setVisualValidation(el, false);
+            el.focus();
+
             return false;
         }
+
+        setVisualValidation(el, true);
     }
 
     return true;
@@ -104,25 +115,46 @@ function validateString(str, regex) {
     return regex.exec(str) !== null;
 }
 
-function validateUserID(userID) {
+function validateUserID(el) {
     let regex = /^[a-zA-Z_]{5,9}$/;
 
-    return validateString(userID, regex);
+    let isValid = validateString(el.value, regex);
+    setVisualValidation(el, isValid);
+
+    return isValid;
 }
 
-function validatePassword(password, passwordConfirmation) {
+function validatePassword(elPass, elPassConf) {
     let regex = /^[a-zA-Z][a-zA-Z0-9_]{8,9}$/;
 
-    if (!validateString(password, regex)) {
-        return false;
-    }
+    let isValid = validateString(elPass.value, regex) && elPass.value === elPassConf.value;
+    setVisualValidation(elPass, isValid);
+    setVisualValidation(elPassConf, isValid);
 
-    return password === passwordConfirmation;
+    return isValid;
 }
 
-function validateEmail(mail) {
+function validateEmail(el) {
     let regex = /^[a-zA-Z](\.?[\w-]+)*@(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9]){3,63}\.[a-zA-Z]{2,4}$/;
-    return validateString(mail, regex);
+    
+    let isValid = validateString(el.value, regex);
+    setVisualValidation(el, isValid);
+
+    return isValid;
 }
 
 //#endregion
+
+function setVisualValidation(el, isValid) {
+    if (el == null) {
+        return;
+    }
+
+    if (isValid) {
+        el.classList.remove("is-invalid");
+        el.classList.add("is-valid");
+    } else {
+        el.classList.remove("is-valid");
+        el.classList.add("is-invalid");
+    }
+}
