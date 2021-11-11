@@ -2,6 +2,41 @@
  * Created by Marco 05/11/2021
  */
 
+document.addEventListener("DOMContentLoaded", function (e) {
+    if (document.images != null) {
+        for (let i = 0; i < document.images.length; i++) {
+            document.images[i].addEventListener("click", function () {
+                openPopup(this);
+            });
+        }
+    }
+});
+
+function openPopup(imgEl) {
+    let winWidth = imgEl.width + 15;
+    let winHeight = imgEl.height + 40;
+
+    const y = window.top.outerHeight / 2 + window.top.screenY - (winHeight / 2);
+    const x = window.top.outerWidth / 2 + window.top.screenX - (winWidth / 2);
+    let newWindow = window.open("", "", "width=" + winWidth + ",height=" + winHeight + ",top=" + y + ", left=" + x);
+
+    newWindow.document.write(
+        "<head>" +
+        "<title>Image</title>" +
+        "</head>" +
+
+        "<body>" +
+        "<div>" +
+        "<img src='" + imgEl.src + "' alt='" + imgEl.alt + "' style='width: " + imgEl.width + "; height: " + imgEl.height + "'/>" +
+        "<input type='button' value='Close' onclick='self.close()'/>" +
+        "</div>" +
+        "</body>"
+    );
+
+    newWindow.onload = function () {
+        newWindow.focus();
+    };
+}
 
 function validateInputs() {
     let elObj = {
@@ -131,6 +166,11 @@ function validatePassword(elPass, elPassConf) {
 }
 
 function validateEmail(el) {
+    // [a-zA-Z](\.?[\w-]+)*                 - name
+    // @
+    // (([a-zA-Z](-*[\w]+)*)\.)*            - sub domains
+    // [a-zA-Z](-*[a-zA-Z0-9]){3,63}\.      - domain name
+    // [a-zA-Z]{2,4}                        - TLD
     let regex = /^[a-zA-Z](\.?[\w-]+)*@(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9]){3,63}\.[a-zA-Z]{2,4}$/;
     let isValid = validateString(el.value, regex);
 
