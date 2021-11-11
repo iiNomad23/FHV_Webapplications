@@ -24,6 +24,10 @@
 
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+
+    <!-- ############ import js src files ######################################################################################################################## -->
+
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -86,15 +90,18 @@
 
     <!-- overview/main information -->
     <div class="container">
-        <form action="mailto:marco.prescher@students.fhv.at" method="post" novalidate enctype="text/plain">
+        <form action="mailto:marco.prescher@students.fhv.at" method="post" novalidate enctype="text/plain"
+              onsubmit="return validateInputs()">
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="firstName">First name *</label>
                     <input type="text" class="form-control" name="firstName" id="firstName" placeholder="John">
+                    <div class="invalid-feedback">Please provide a valid first name.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="lastName">Surname *</label>
                     <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Doe">
+                    <div class="invalid-feedback">Please provide a valid last name.</div>
                 </div>
             </div>
 
@@ -102,6 +109,7 @@
                 <div class="col-md mb-3">
                     <label for="address">Address *</label>
                     <textarea class="md-textarea form-control" name="address" id="address" rows="3"></textarea>
+                    <div class="invalid-feedback">Please provide a valid address.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="country">Country *</label>
@@ -113,23 +121,26 @@
                         <option>Germany</option>
                         <option>others</option>
                     </select>
+                    <div class="invalid-feedback">Please select a country.</div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Gender *</label><br>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="maleSex" value="male">
-                    <label class="form-check-label" for="maleSex">Male</label>
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="femaleSex" value="female">
-                    <label class="form-check-label" for="femaleSex">Female</label>
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                    <label class="form-check-label" for="female">Female</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sex" id="diverseSex" value="diverse">
-                    <label class="form-check-label" for="diverseSex">Divers</label>
+                    <input class="form-check-input" type="radio" name="gender" id="diverse" value="diverse" required>
+                    <label class="form-check-label" for="diverse">Divers</label>
                 </div>
+
+                <div id="gender-feedback" class="invalid-feedback">Please select a gender.</div>
             </div>
 
             <hr>
@@ -137,15 +148,17 @@
             <div class="form-group">
                 <label for="userID">Your User-ID *</label>
                 <input type="text" class="form-control" name="userID" id="userID" placeholder="john.doe">
+                <div class="invalid-feedback">Please provide a valid userID.</div>
             </div>
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="email">E-Mail *</label>
                     <input type="text" class="form-control" name="email" id="email" placeholder="john.doe@email.com">
+                    <div class="invalid-feedback">Please provide a valid email.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="mobileNumber">Mobile Number</label>
-                    <input type="text" class="form-control" name="email" id="mobileNumber">
+                    <input type="text" class="form-control" name="mobileNumber" id="mobileNumber">
                 </div>
             </div>
             <div class="form-group">
@@ -156,41 +169,47 @@
                 <div class="col-md mb-3">
                     <label for="password">Password *</label>
                     <input type="password" class="form-control" name="password" id="password">
+                    <div class="invalid-feedback">Please provide a valid password.</div>
                 </div>
                 <div class="col-md mb-3">
                     <label for="confirmPassword">Confirm Password *</label>
                     <input type="password" class="form-control" id="confirmPassword">
+                    <div class="invalid-feedback">Please provide a valid confirmation password.</div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="sportCategories">Sport Categories *</label>
-                <select multiple class="form-control" id="sportCategories">
+                <select multiple class="form-control" id="sportCategories" name="sportCategory">
                     <option>Climbing</option>
                     <option>Cycling</option>
                     <option>Friendly Fire</option>
                 </select>
+                <div class="invalid-feedback">Please select a sport category.</div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="user-category-checkboxes">
                 <label>User Categories *</label><br>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="athleteRole" value="athlete">
-                    <label class="form-check-label" for="athleteRole">Athlete</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="athlete" value="athlete">
+                    <label class="form-check-label" for="athlete">Athlete</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="organizerRole" value="organizer">
-                    <label class="form-check-label" for="organizerRole">Organizer</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="organizer"
+                           value="organizer">
+                    <label class="form-check-label" for="organizer">Organizer</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="role" id="adminRole" value="admin">
-                    <label class="form-check-label" for="adminRole">Admin</label>
+                    <input class="form-check-input" type="checkbox" name="userCategory" id="admin" value="admin">
+                    <label class="form-check-label" for="admin">Admin</label>
                 </div>
+
+                <div id="sportCategories-feedback" class="invalid-feedback">Please select at least one user category.</div>
             </div>
 
             <button class="btn my-btn-secondary accountButton" type="reset">Reset Details</button>
-            <button class="btn my-btn-primary accountButton" type="submit">Send registry request</button>
+            <button class="btn my-btn-primary accountButton" type="submit">Submit</button>
         </form>
     </div>
 </main>

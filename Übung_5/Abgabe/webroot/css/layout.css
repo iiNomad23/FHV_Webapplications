@@ -44,6 +44,10 @@ td {
     border-radius: 0;
 }
 
+.displayBlock {
+    display: block;
+}
+
 .accountButton {
     float: right;
     margin: 5px;
