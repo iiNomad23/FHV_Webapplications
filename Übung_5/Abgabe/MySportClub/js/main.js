@@ -168,10 +168,11 @@ function validatePassword(elPass, elPassConf) {
 function validateEmail(el) {
     // [a-zA-Z](\.?[\w-]+)*                 - name
     // @
+    // (?=.{3,63}$)                         - look ahead
     // (([a-zA-Z](-*[\w]+)*)\.)*            - sub domains
-    // [a-zA-Z](-*[a-zA-Z0-9]){3,63}\.      - domain name
+    // [a-zA-Z](-*[a-zA-Z0-9])+\.           - domain name
     // [a-zA-Z]{2,4}                        - TLD
-    let regex = /^[a-zA-Z](\.?[\w-]+)*@(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9]){3,63}\.[a-zA-Z]{2,4}$/;
+    let regex = /^[a-zA-Z](\.?[\w-]+)*@(?=.{3,63}$)(([a-zA-Z](-*[\w]+)*)\.)*[a-zA-Z](-*[a-zA-Z0-9])+\.[a-zA-Z]{2,4}$/;
     let isValid = validateString(el.value, regex);
 
     setVisualValidation(el, isValid);
