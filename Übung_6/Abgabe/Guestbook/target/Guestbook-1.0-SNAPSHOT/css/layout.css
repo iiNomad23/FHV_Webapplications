@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif !important;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+td {
+    min-width: 90px;
+}
+
+.my-jumbotron {
+    background-color: #cde1f5 !important;
+    padding-bottom: 1rem;
+}
+
+.my-jumbotron-sub {
+    background-color: #cde1f5 !important;
+    padding-bottom: 1rem;
+    font-size: 14px;
+}
+
+.bg-myColor {
+    background-color: #4b86fc;
+    color: rgba(255, 255, 255, .5);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.my-btn-primary {
+    background-color: #4b86fc;
+    color: white;
+}
+
+.my-btn-secondary {
+    background-color: #8d8d8d;
+    color: white;
+}
+.my-btn-primary:hover, .my-btn-secondary:hover {
+    color: white;
+    border-radius: 0;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.accountButton {
+    float: right;
+    margin: 5px;
+}
+
+.subHeader {
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.versionNum {
+    float: right;
+    color: #c3c3c3;
+}
+
+.imageMedium {
+    width: 200px;
+    height: 200px;
+}
