@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 function openPopup(imgEl) {
-    let winWidth = imgEl.width + 15;
-    let winHeight = imgEl.height + 40;
+    let realWidth = imgEl.naturalWidth + 5;
+    let realHeight = imgEl.naturalHeight + 5;
 
-    const y = window.top.outerHeight / 2 + window.top.screenY - (winHeight / 2);
-    const x = window.top.outerWidth / 2 + window.top.screenX - (winWidth / 2);
-    let newWindow = window.open("", "", "width=" + winWidth + ",height=" + winHeight + ",top=" + y + ", left=" + x);
+    const y = window.top.outerHeight / 2 + window.top.screenY - (realHeight / 2);
+    const x = window.top.outerWidth / 2 + window.top.screenX - (realHeight / 2);
+    let newWindow = window.open("", "", "width=" + realWidth + ",height=" + realHeight + ",top=" + y + ", left=" + x);
 
     newWindow.document.write(
         "<head>" +
@@ -27,7 +27,7 @@ function openPopup(imgEl) {
 
         "<body>" +
         "<div>" +
-        "<img src='" + imgEl.src + "' alt='" + imgEl.alt + "' style='width: " + imgEl.width + "; height: " + imgEl.height + "'/>" +
+        "<img src='" + imgEl.src + "' alt='" + imgEl.alt + "'/>" +
         "<input type='button' value='Close' onclick='self.close()'/>" +
         "</div>" +
         "</body>"
