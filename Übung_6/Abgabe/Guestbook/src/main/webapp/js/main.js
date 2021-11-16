@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 function openPopup(imgEl) {
-    let realWidth = imgEl.naturalWidth + 5;
-    let realHeight = imgEl.naturalHeight + 5;
+    let realWidth = imgEl.naturalWidth + 15;
+    let realHeight = imgEl.naturalHeight + 40;
 
     const y = window.top.outerHeight / 2 + window.top.screenY - (realHeight / 2);
     const x = window.top.outerWidth / 2 + window.top.screenX - (realHeight / 2);
