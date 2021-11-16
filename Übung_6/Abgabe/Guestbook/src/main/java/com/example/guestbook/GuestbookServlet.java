@@ -21,25 +21,28 @@ public class GuestbookServlet extends HttpServlet {
     @SuppressWarnings("StringConcatenationInsideStringBufferAppend")
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
+        
         PrintWriter out = response.getWriter();
-
         out.println("<html>");
 
-        // header
+        //#region html header
         out.println("<head>" +
-                "<meta charset='UTF-8'>" +
-                "<title>MySportClub</title>" +
-                "<link rel='stylesheet' href='./css/bootstrap.min.css'>" +
-                "<link rel='stylesheet' href='./css/font-awesome.min.css'>" +
-                "<link rel='stylesheet' href='./css/layout.css'>" +
-                "<link rel='stylesheet' href='./css/print.css'>" +
-                "<script src='./js/jquery-3.6.0.min.js'></script>" +
-                "<script src='./js/bootstrap.min.js'></script>" +
-                "<script src='./js/main.js'></script>" +
+                "   <meta charset='UTF-8'>" +
+
+                "   <title>MySportClub</title>" +
+
+                "   <link rel='stylesheet' href='./css/bootstrap.min.css'>" +
+                "   <link rel='stylesheet' href='./css/font-awesome.min.css'>" +
+                "   <link rel='stylesheet' href='./css/layout.css'>" +
+                "   <link rel='stylesheet' href='./css/print.css'>" +
+
+                "   <script src='./js/jquery-3.6.0.min.js'></script>" +
+                "   <script src='./js/bootstrap.min.js'></script>" +
+                "   <script src='./js/main.js'></script>" +
                 "</head>"
         );
+        //#endregion
 
-        // body
         out.println("<body>");
 
         //#region navbar
@@ -88,7 +91,10 @@ public class GuestbookServlet extends HttpServlet {
         );
         //#endregion
 
+        //#region content
         out.println("<main role='main'>");
+
+        // header --------------------------------------------------------
         out.println("<div class='jumbotron my-jumbotron-sub'>" +
                 "   <div class='container'>" +
                 "       <h1>Guestbook</h1>" +
@@ -96,9 +102,10 @@ public class GuestbookServlet extends HttpServlet {
                 "   </div>" +
                 "</div>"
         );
+
         out.println("<div class='container'>");
 
-        // add entry
+        // add entry form ------------------------------------------------
         out.println("<form class='needs-validation' action='guestbook_overview' method='post'>" +
                 "   <div class='form-row'>" +
                 "        <div class='col-md mb-3'>" +
@@ -123,9 +130,7 @@ public class GuestbookServlet extends HttpServlet {
                 "</form>"
         );
 
-
-        // entries
-
+        // entry table ---------------------------------------------------
         StringBuilder rows = new StringBuilder();
         for (GuestBookEntry entries : guestBookEntries) {
             rows.append("<tr>");
@@ -160,7 +165,7 @@ public class GuestbookServlet extends HttpServlet {
         out.print("</div>");
         out.println("</main>");
 
-        // footer
+        // footer --------------------------------------------------------
         out.println("<footer class='container'>" +
                 "    <br><br>" +
                 "    <hr>" +
@@ -170,6 +175,7 @@ public class GuestbookServlet extends HttpServlet {
                 "    </p>" +
                 "</footer>"
         );
+        //#endregion
 
         out.println("</body>");
         out.println("</html>");
