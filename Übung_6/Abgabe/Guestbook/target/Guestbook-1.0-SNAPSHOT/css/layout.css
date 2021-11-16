@@ -11,6 +11,7 @@ img {
 
 td {
     min-width: 90px;
+    word-break: break-all;
 }
 
 .my-jumbotron {
@@ -39,6 +40,7 @@ td {
     background-color: #8d8d8d;
     color: white;
 }
+
 .my-btn-primary:hover, .my-btn-secondary:hover {
     color: white;
     border-radius: 0;

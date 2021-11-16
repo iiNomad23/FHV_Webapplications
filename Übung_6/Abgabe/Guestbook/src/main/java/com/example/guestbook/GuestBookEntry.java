@@ -3,12 +3,16 @@ package com.example.guestbook;
 public class GuestBookEntry {
     private String name;
     private String email;
-    private String text;
+    private String message;
+
+    public GuestBookEntry() {
+        this("", "", "");
+    }
 
     public GuestBookEntry(String name, String email, String text) {
         this.name = name;
         this.email = email;
-        this.text = text;
+        this.message = text;
     }
 
     public String getName() {
@@ -27,11 +31,11 @@ public class GuestBookEntry {
         this.email = email;
     }
 
-    public String getText() {
-        return text;
+    public String getMessage() {
+        return message;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
