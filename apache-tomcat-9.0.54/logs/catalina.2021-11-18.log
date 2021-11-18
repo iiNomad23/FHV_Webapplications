@@ -1,0 +1,196 @@
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server Version:        Apache Tomcat/9.0.54
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Nov-2021 12:10:39.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architektur:           amd64
+18-Nov-2021 12:10:39.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-11.0.10
+18-Nov-2021 12:10:39.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.10+8-LTS-162
+18-Nov-2021 12:10:39.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Hersteller:        Oracle Corporation
+18-Nov-2021 12:10:39.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:10:39.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\conf\logging.properties
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:10:39.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\temp
+18-Nov-2021 12:10:39.417 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+18-Nov-2021 12:10:39.417 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+18-Nov-2021 12:10:39.417 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Nov-2021 12:10:39.433 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+18-Nov-2021 12:10:39.792 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisiere ProtocolHandler["http-nio-8080"]
+18-Nov-2021 12:10:39.824 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [699] milliseconds
+18-Nov-2021 12:10:39.886 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Nov-2021 12:10:39.886 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+18-Nov-2021 12:10:39.917 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war]
+18-Nov-2021 12:10:40.449 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [141] milliseconds.
+18-Nov-2021 12:10:40.464 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war] has finished in [547] ms
+18-Nov-2021 12:10:40.464 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs]
+18-Nov-2021 12:10:40.495 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs] has finished in [31] ms
+18-Nov-2021 12:10:40.495 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples]
+18-Nov-2021 12:10:40.964 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples] has finished in [469] ms
+18-Nov-2021 12:10:40.964 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war]
+18-Nov-2021 12:10:41.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war] has finished in [47] ms
+18-Nov-2021 12:10:41.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager]
+18-Nov-2021 12:10:41.042 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager] has finished in [31] ms
+18-Nov-2021 12:10:41.042 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager]
+18-Nov-2021 12:10:41.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager] has finished in [47] ms
+18-Nov-2021 12:10:41.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT]
+18-Nov-2021 12:10:41.105 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT] has finished in [16] ms
+18-Nov-2021 12:10:41.120 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 12:10:41.245 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1426] milliseconds
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server Version:        Apache Tomcat/9.0.54
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architektur:           amd64
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-11.0.10
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.10+8-LTS-162
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Hersteller:        Oracle Corporation
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:12:09.960 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\conf\logging.properties
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\temp
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+18-Nov-2021 12:12:09.975 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Nov-2021 12:12:09.991 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+18-Nov-2021 12:12:10.257 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisiere ProtocolHandler["http-nio-8080"]
+18-Nov-2021 12:12:10.272 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [513] milliseconds
+18-Nov-2021 12:12:10.335 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Nov-2021 12:12:10.335 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+18-Nov-2021 12:12:10.350 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war]
+18-Nov-2021 12:12:10.793 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [214] milliseconds.
+18-Nov-2021 12:12:10.809 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war] has finished in [459] ms
+18-Nov-2021 12:12:10.809 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs]
+18-Nov-2021 12:12:10.841 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs] has finished in [32] ms
+18-Nov-2021 12:12:10.841 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples]
+18-Nov-2021 12:12:11.129 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples] has finished in [288] ms
+18-Nov-2021 12:12:11.137 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war]
+18-Nov-2021 12:12:11.169 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war] has finished in [32] ms
+18-Nov-2021 12:12:11.169 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager]
+18-Nov-2021 12:12:11.201 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager] has finished in [32] ms
+18-Nov-2021 12:12:11.201 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager]
+18-Nov-2021 12:12:11.225 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager] has finished in [24] ms
+18-Nov-2021 12:12:11.225 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT]
+18-Nov-2021 12:12:11.249 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT] has finished in [24] ms
+18-Nov-2021 12:12:11.257 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 12:12:11.460 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1180] milliseconds
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server Version:        Apache Tomcat/9.0.54
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architektur:           amd64
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-11.0.10
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.10+8-LTS-162
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Hersteller:        Oracle Corporation
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:14:14.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\conf\logging.properties
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\temp
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+18-Nov-2021 12:14:14.020 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Nov-2021 12:14:14.036 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+18-Nov-2021 12:14:14.301 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisiere ProtocolHandler["http-nio-8080"]
+18-Nov-2021 12:14:14.317 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [509] milliseconds
+18-Nov-2021 12:14:14.364 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Nov-2021 12:14:14.364 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+18-Nov-2021 12:14:14.395 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war]
+18-Nov-2021 12:14:14.833 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [203] milliseconds.
+18-Nov-2021 12:14:14.849 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war] has finished in [454] ms
+18-Nov-2021 12:14:14.849 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs]
+18-Nov-2021 12:14:14.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs] has finished in [31] ms
+18-Nov-2021 12:14:14.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples]
+18-Nov-2021 12:14:15.161 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples] has finished in [281] ms
+18-Nov-2021 12:14:15.161 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war]
+18-Nov-2021 12:14:15.192 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war] has finished in [31] ms
+18-Nov-2021 12:14:15.192 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager]
+18-Nov-2021 12:14:15.223 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager] has finished in [31] ms
+18-Nov-2021 12:14:15.223 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager]
+18-Nov-2021 12:14:15.255 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager] has finished in [32] ms
+18-Nov-2021 12:14:15.255 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT]
+18-Nov-2021 12:14:15.270 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT] has finished in [15] ms
+18-Nov-2021 12:14:15.270 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 12:14:15.489 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1166] milliseconds
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server Version:        Apache Tomcat/9.0.54
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architektur:           amd64
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-11.0.10
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.10+8-LTS-162
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Hersteller:        Oracle Corporation
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:18:40.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\conf\logging.properties
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\temp
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+18-Nov-2021 12:18:40.558 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+18-Nov-2021 12:18:40.574 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+18-Nov-2021 12:18:40.840 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisiere ProtocolHandler["http-nio-8080"]
+18-Nov-2021 12:18:40.855 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [511] milliseconds
+18-Nov-2021 12:18:40.918 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Nov-2021 12:18:40.918 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+18-Nov-2021 12:18:40.933 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war]
+18-Nov-2021 12:18:41.372 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [212] milliseconds.
+18-Nov-2021 12:18:41.387 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook-1.0-SNAPSHOT.war] has finished in [454] ms
+18-Nov-2021 12:18:41.387 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs]
+18-Nov-2021 12:18:41.418 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\docs] has finished in [31] ms
+18-Nov-2021 12:18:41.418 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples]
+18-Nov-2021 12:18:41.683 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\examples] has finished in [265] ms
+18-Nov-2021 12:18:41.683 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war]
+18-Nov-2021 12:18:41.723 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\Guestbook_war] has finished in [40] ms
+18-Nov-2021 12:18:41.723 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager]
+18-Nov-2021 12:18:41.753 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\host-manager] has finished in [30] ms
+18-Nov-2021 12:18:41.753 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager]
+18-Nov-2021 12:18:41.777 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\manager] has finished in [24] ms
+18-Nov-2021 12:18:41.785 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploye Web-Applikations-Verzeichnis [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT]
+18-Nov-2021 12:18:41.801 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Studium\BSc Semester 3\Webapplications\apache-tomcat-9.0.54\webapps\ROOT] has finished in [16] ms
+18-Nov-2021 12:18:41.809 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Nov-2021 12:18:42.032 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1174] milliseconds
