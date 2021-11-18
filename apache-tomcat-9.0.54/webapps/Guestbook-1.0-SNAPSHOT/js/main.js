@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 function openPopup(imgEl) {
-    let realWidth = imgEl.naturalWidth + 15;
-    let realHeight = imgEl.naturalHeight + 40;
+    const realWidth = imgEl.naturalWidth + 15;
+    const realHeight = imgEl.naturalHeight + 40;
 
+    const x = window.top.outerWidth / 2 + window.top.screenX - (realWidth / 2);
     const y = window.top.outerHeight / 2 + window.top.screenY - (realHeight / 2);
-    const x = window.top.outerWidth / 2 + window.top.screenX - (realHeight / 2);
+
     let newWindow = window.open("", "", "width=" + realWidth + ",height=" + realHeight + ",top=" + y + ", left=" + x);
 
     newWindow.document.write(
