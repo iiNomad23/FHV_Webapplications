@@ -95,3 +95,17 @@
 0:0:0:0:0:0:0:1 - - [18/Nov/2021:18:28:22 +0100] "GET /Guestbook-1.0-SNAPSHOT/img/image_friendlyFire_1.png HTTP/1.1" 200 314931
 0:0:0:0:0:0:0:1 - - [18/Nov/2021:18:28:22 +0100] "GET /Guestbook-1.0-SNAPSHOT/img/image_friendlyFire_2.png HTTP/1.1" 200 423969
 0:0:0:0:0:0:0:1 - - [18/Nov/2021:18:28:22 +0100] "GET /Guestbook-1.0-SNAPSHOT/img/image_friendlyFire_3.png HTTP/1.1" 200 253042
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:18:42:37 +0100] "GET / HTTP/1.1" 200 11354
+0:0:0:0:0:0:0:1 - admin [18/Nov/2021:18:48:50 +0100] "GET /manager/html HTTP/1.1" 200 20180
+0:0:0:0:0:0:0:1 - admin [18/Nov/2021:18:52:32 +0100] "GET /manager/html HTTP/1.1" 200 20180
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:13:55 +0100] "GET /Guestbook-1.0-SNAPSHOT/js/main.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:40 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:43 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:43 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:43 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:43 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:43 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4038
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:46 +0100] "POST /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4124
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:52 +0100] "POST /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4210
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:16:58 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4210
+0:0:0:0:0:0:0:1 - - [18/Nov/2021:19:17:11 +0100] "GET /Guestbook-1.0-SNAPSHOT/guestbook_overview HTTP/1.1" 200 4210
