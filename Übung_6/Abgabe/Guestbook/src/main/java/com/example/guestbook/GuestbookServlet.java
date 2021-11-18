@@ -14,8 +14,8 @@ public class GuestbookServlet extends HttpServlet {
     private final List<GuestBookEntry> guestBookEntries = new ArrayList<GuestBookEntry>();
 
     public void init() {
-        guestBookEntries.add(new GuestBookEntry("Jeremias", "jere.john@hotmail.com", "Lorenzo Von Matterhorn."));
-        guestBookEntries.add(new GuestBookEntry("Heel", "heel.doe@hotmail.com", "Hallo?"));
+        guestBookEntries.add(new GuestBookEntry("Marco", "marco.john@hotmail.com", "Lorenzo Von Matterhorn."));
+        guestBookEntries.add(new GuestBookEntry("Prescher", "prescher.doe@hotmail.com", "Hallo?"));
     }
 
     @SuppressWarnings("StringConcatenationInsideStringBufferAppend")
