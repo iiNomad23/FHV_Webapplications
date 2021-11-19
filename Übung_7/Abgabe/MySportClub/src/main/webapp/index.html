@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="MySportClub, Activities, Climbing, Cycling, Friendly Fire, Manfred Hiller">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Search and find famous teams and tournaments.">
+
+    <title>MySportClub</title>
+
+    <!-- ############ import css files ########################################################################################################################### -->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/print.css">
+
+    <!-- ############ import js lib files ######################################################################################################################## -->
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- ############ import js src files ######################################################################################################################## -->
+
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-myColor">
+    <a class="navbar-brand" href="./index.html">
+        <i class="fa fa-soccer-ball-o"></i>
+        MySportClub
+    </a>
+
+    <!-- navbar toggler is only shown if page width is small enough (jquery needed) -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- standard nav bar for normal desktop sizes -->
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/climbing_club.html">Climbing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/cycling_club.html">Cycling</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="clubs/friendlyFire_eSport_club.html">Friendly Fire</a>
+            </li>
+        </ul>
+
+        <!-- guestbook, registry and eMail-->
+        <ul class="navbar-nav right">
+            <li class="nav-item">
+                <a class="nav-link" href="guestbook_overview">Guestbook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./account.html">Registry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mailto:thisIsAEmail@hotmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main">
+
+    <!-- header -->
+    <div class="jumbotron my-jumbotron">
+        <div class="container">
+            <h1 class="display-3">Welcome to MySportClub</h1>
+            <p>
+                Here you will find some information about us, where we are located, what activities we are doing
+                etc.<br>
+                And some text which is useless because I do not have some real useful information or my imagination is
+                just too bad, but I hope this is enough for the welcome text.
+            </p>
+        </div>
+    </div>
+
+    <!-- overview/main information -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h3>Our activities</h3>
+                <ul>
+                    <li><a href="./clubs/climbing_club.html">Climbing</a></li>
+                    <li><a href="./clubs/cycling_club.html">Cycling</a></li>
+                    <li><a href="./clubs/friendlyFire_eSport_club.html">Friendly Fire</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md">
+                <h3>Club organizer</h3>
+                <p>
+                    Manfred Hiller
+                </p>
+                <img src="img/image_1.png" class="imageMedium" alt="Manfred Hiller">
+            </div>
+
+            <div class="col-md">
+                <h3>Activity organizer</h3>
+                <p>
+                    <b>Climbing</b>
+                    <br>
+                    Anabia York
+                    <br>
+                    Sion Mason
+                </p>
+                <p>
+                    <b>Cycling</b>
+                    <br>
+                    Olivia-Mae Langley
+                    <br>
+                    Bert Goodman
+                </p>
+                <p>
+                    <b>Friendly Fire</b>
+                    <br>
+                    Brody Burnett
+                    <br>
+                    Fredrick Gardner
+                    <br>
+                    Kira Mayo
+                </p>
+            </div>
+        </div>
+
+        <br><br>
+        <hr>
+
+        <div class="row">
+            <div class="col-md">
+                <h3>Opening hours</h3>
+                <p>
+                    <b>Monday - Friday</b>
+                    <br>
+                    08:00 - 14:00 Uhr
+                    <br>
+                    15:00 - 20:00 Uhr
+                </p>
+                <p>
+                    <b>Saturday/Sunday/Holidays</b>
+                    <br>
+                    08:00 - 11:00 Uhr
+                </p>
+            </div>
+
+            <div class="col-md">
+                <h3>Contact</h3>
+                <p>
+                    <b>Address</b>
+                    <br>
+                    MySportClub
+                    <br>
+                    548 Oakland Rd.
+                    <br>
+                    Cedar Falls, IA 50613
+                </p>
+                <p>
+                    <b>Tel</b>
+                    <br>
+                    +99 664 0101010
+                    <br>
+                    <b>E-Mail</b>
+                    <br>
+                    thisIsAEmail@hotmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- footer -->
+<footer class="container">
+    <br><br>
+    <hr>
+
+    <p>
+        &copy; MySportClub 2021
+        <span class="versionNum">v1.2</span>
+    </p>
+</footer>
+
+</body>
+</html>
