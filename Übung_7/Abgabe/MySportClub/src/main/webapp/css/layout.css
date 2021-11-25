@@ -14,6 +14,15 @@ td {
     word-break: break-all;
 }
 
+.colorTable {
+    min-width: 65px !important;
+}
+
+.emptyArea {
+    margin-top: 3rem !important;
+    text-align: center;
+}
+
 .my-jumbotron {
     background-color: #cde1f5 !important;
     padding-bottom: 1rem;

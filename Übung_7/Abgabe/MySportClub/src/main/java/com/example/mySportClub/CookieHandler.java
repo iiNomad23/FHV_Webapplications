@@ -15,13 +15,13 @@ public class CookieHandler extends HttpServlet {
         response.setHeader("Cache-Control", "no-cache, must-revalidate");
         response.setHeader("Pragma", "no-cache");
 
-        boolean redirected = false;
+        boolean isCookieRedirect = false;
 
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie c : cookies) {
                 if (c.getName().equals("lastVisitedPage")) {
-                    redirected = true;
+                    isCookieRedirect = true;
 
                     response.sendRedirect(c.getValue());
                     break;
@@ -29,7 +29,7 @@ public class CookieHandler extends HttpServlet {
             }
         }
 
-        if (!redirected) {
+        if (!isCookieRedirect) {
             response.sendRedirect("home.html");
         }
     }
