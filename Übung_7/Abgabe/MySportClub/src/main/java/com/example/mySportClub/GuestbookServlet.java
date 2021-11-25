@@ -1,4 +1,4 @@
-package com.example.guestbook;
+package com.example.mySportClub;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,7 +47,7 @@ public class GuestbookServlet extends HttpServlet {
 
         //#region navbar
         out.println("<nav class='navbar navbar-expand-md navbar-dark fixed-top bg-myColor'>" +
-                "    <a class='navbar-brand' href='./index.html'>" +
+                "    <a class='navbar-brand' href='./home.html'>" +
                 "        <i class='fa fa-soccer-ball-o'></i>" +
                 "        MySportClub" +
                 "    </a>" +
@@ -60,7 +60,7 @@ public class GuestbookServlet extends HttpServlet {
                 "    <div class='collapse navbar-collapse' id='navbar'>" +
                 "        <ul class='navbar-nav mr-auto'>" +
                 "            <li class='nav-item'>" +
-                "                <a class='nav-link' href='./index.html'>Home <span class='sr-only'>(current)</span></a>" +
+                "                <a class='nav-link' href='./home.html'>Home <span class='sr-only'>(current)</span></a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
                 "                <a class='nav-link' href='clubs/climbing_club.html'>Climbing</a>" +
