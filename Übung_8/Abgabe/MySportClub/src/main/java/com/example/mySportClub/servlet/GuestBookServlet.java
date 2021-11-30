@@ -1,4 +1,6 @@
-package com.example.mySportClub;
+package com.example.mySportClub.servlet;
+
+import com.example.mySportClub.domain.GuestBookEntry;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "guestbook_overview", value = "/guestbook_overview")
-public class GuestbookServlet extends HttpServlet {
+public class GuestBookServlet extends HttpServlet {
     private final List<GuestBookEntry> guestBookEntries = new ArrayList<GuestBookEntry>();
 
     public void init() {
@@ -38,6 +40,7 @@ public class GuestbookServlet extends HttpServlet {
 
                 "   <script src='./js/jquery-3.6.0.min.js'></script>" +
                 "   <script src='./js/bootstrap.min.js'></script>" +
+                "   <script src='./js/cookieHandler.js'></script>" +
                 "   <script src='./js/main.js'></script>" +
                 "</head>"
         );
@@ -81,7 +84,7 @@ public class GuestbookServlet extends HttpServlet {
                 "                <a class='nav-link' href='guestbook_overview'>Guestbook</a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
-                "                <a class='nav-link' href='./account.html'>Registry</a>" +
+                "                <a class='nav-link' href='./account.jsp'>Registry</a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
                 "                <a class='nav-link' href='mailto:thisIsAEmail@hotmail.com'>" +
@@ -112,8 +115,8 @@ public class GuestbookServlet extends HttpServlet {
         out.println("<form class='needs-validation' action='guestbook_overview' method='post'>" +
                 "   <div class='form-row'>" +
                 "        <div class='col-md mb-3'>" +
-                "            <label for='test'>Name</label>" +
-                "            <input type='text' class='form-control' name='test' id='name' placeholder='John Doe' required>" +
+                "            <label for='name'>Name</label>" +
+                "            <input type='text' class='form-control' name='name' id='name' placeholder='John Doe' required>" +
                 "            <div class='invalid-feedback'>Please provide a valid name.</div>" +
                 "        </div>" +
                 "        <div class='col-md mb-3'>" +
@@ -185,7 +188,7 @@ public class GuestbookServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String name = request.getParameter("test");
+        String name = request.getParameter("name");
         String email = request.getParameter("email");
         String message = request.getParameter("message");
 

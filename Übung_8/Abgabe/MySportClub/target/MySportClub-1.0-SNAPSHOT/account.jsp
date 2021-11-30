@@ -72,7 +72,7 @@
                 <a class="nav-link" href="guestbook_overview">Guestbook</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="./account.html">Registry</a>
+                <a class="nav-link" href="./account.jsp">Registry</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="mailto:thisIsAEmail@hotmail.com">
@@ -98,8 +98,9 @@
 
     <!-- overview/main information -->
     <div class="container">
-        <form action="mailto:marco.prescher@students.fhv.at" method="post" novalidate enctype="text/plain"
-              onsubmit="return validateInputs()">
+        <form action="accountRegistryHandler"
+              method="post"
+              onsubmit="return validateInputs()" novalidate>
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="firstName">First name *</label>

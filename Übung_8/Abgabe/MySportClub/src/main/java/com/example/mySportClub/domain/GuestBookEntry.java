@@ -1,4 +1,4 @@
-package com.example.mySportClub;
+package com.example.mySportClub.domain;
 
 public class GuestBookEntry {
     private String name;

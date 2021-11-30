@@ -1,4 +1,4 @@
-package com.example.mySportClub;
+package com.example.mySportClub.servlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "index.html", value = "/index.html")
-public class CookieHandler extends HttpServlet {
+public class CookieHandlerServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
