@@ -100,8 +100,8 @@
     <!-- overview/main information -->
     <div class="container">
         <c:choose>
-            <c:when test="${sessionScope.login.validLogin}">
-                <h1 class="display-3">Welcome <c:out value="${sessionScope.login.userID}"/></h1>
+            <c:when test="${sessionScope.registry.validLogin}">
+                <h1 class="display-3"><c:out value="${sessionScope.registry.userId}"/></h1>
             </c:when>
             <c:otherwise>
                 <h1 class="display-3">Something went wrong, please retry your registry</h1>
