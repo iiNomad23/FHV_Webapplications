@@ -30,6 +30,13 @@ public class GuestBookServlet extends HttpServlet {
         //#region html header
         out.println("<head>" +
                 "   <meta charset='UTF-8'>" +
+                
+                "   <meta name='HandheldFriendly' content='true'/>" +
+                "   <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'/>" +
+                "   <meta name='keywords' content='MySportClub, Activities, Climbing, Cycling, Friendly Fire, Manfred Hiller'>" +
+                "   <meta name='robots' content='index, follow'>" +
+                "   <meta name='description' content='Search and find famous teams and tournaments.'>" +
+                "   <meta http-equiv='cache-control' content='no-cache, must-revalidate'>" +
 
                 "   <title>MySportClub</title>" +
 

@@ -1,7 +1,7 @@
 package com.example.mySportClub.servlet;
 
-import com.example.mySportClub.form.AccountRegistryForm;
 import com.example.mySportClub.domain.User;
+import com.example.mySportClub.form.AccountRegistryForm;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Objects;
 
 @WebServlet(name = "accountRegistryHandler", value = "/accountRegistryHandler")
-//@WebServlet(name = "guestbook_overview", value = "/guestbook_overview")
 public class AccountRegistryHandlerServlet extends HttpServlet {
     private final List<User> userEntries = new ArrayList<User>();
 
@@ -36,8 +35,7 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
             if (userExist) {
-                session.setAttribute("registry", new AccountRegistryForm(userId, false));
-                response.sendRedirect("account.jsp");
+                session.setAttribute("registry", new AccountRegistryForm(userId, "User registry failed.", false, userExist));
             } else {
                 String password = request.getParameter("password");
                 String firstName = request.getParameter("firstName");
@@ -47,13 +45,13 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
                     userEntries.add(new User(userId, password, firstName, lastName));
 
                     // in our hotelSoftwareProject we call beans as forms
-                    session.setAttribute("registry", new AccountRegistryForm(userId, true));
-                    response.sendRedirect("welcome.jsp");
+                    session.setAttribute("registry", new AccountRegistryForm(userId, "User registry successful.", true, userExist));
                 } else {
-                    session.setAttribute("registry", new AccountRegistryForm(userId, false));
-                    response.sendRedirect("account.jsp");
+                    session.setAttribute("registry", new AccountRegistryForm(userId, "User registry failed.", false, userExist));
                 }
             }
+
+            response.sendRedirect("welcome.jsp");
         }
     }
 

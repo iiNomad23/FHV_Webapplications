@@ -5,6 +5,7 @@
   Time: 11:58
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -76,7 +77,7 @@
                 <a class="nav-link" href="guestbook_overview">Guestbook</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="account.jsp">Registry</a>
+                <a class="nav-link" href="./account.jsp">Registry</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="mailto:thisIsAEmail@hotmail.com">
@@ -93,20 +94,45 @@
     <!-- header -->
     <div class="jumbotron my-jumbotron-sub">
         <div class="container">
-            <h1>Welcome</h1>
+            <h1>
+                <c:out value="${sessionScope.registry.message()}"/>
+            </h1>
         </div>
     </div>
 
     <!-- overview/main information -->
     <div class="container">
-        <c:choose>
-            <c:when test="${sessionScope.registry.validLogin}">
-                <h1 class="display-3"><c:out value="${sessionScope.registry.userId}"/></h1>
-            </c:when>
-            <c:otherwise>
-                <h1 class="display-3">Something went wrong, please retry your registry</h1>
-            </c:otherwise>
-        </c:choose>
+        <div class="row">
+            <div class="col-md">
+                <c:choose>
+                    <c:when test="${sessionScope.registry.registrySuccessful}">
+                        <p>
+                            Welcome user <b><c:out value="${sessionScope.registry.userId()}"/></b>
+                            <br>
+                            Now you can register yourself for all future tournaments.
+                        </p>
+                    </c:when>
+                    <c:otherwise>
+                        <c:choose>
+                            <c:when test="${sessionScope.registry.sameUser}">
+                                <p>
+                                    User-ID <b><c:out value="${sessionScope.registry.userId()}"/></b> already exist.
+                                    <br>
+                                    Please use another User-ID.
+                                </p>
+                            </c:when>
+                            <c:otherwise>
+                                <p>
+                                    Something went wrong.
+                                    <br>
+                                    Please retry your registry.
+                                </p>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:otherwise>
+                </c:choose>
+            </div>
+        </div>
     </div>
 
 </main>
