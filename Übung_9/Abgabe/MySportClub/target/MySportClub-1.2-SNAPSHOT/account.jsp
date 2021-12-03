@@ -170,9 +170,6 @@
                     <input type="text" class="form-control" name="mobileNumber" id="mobileNumber">
                 </div>
             </div>
-            <div class="form-group">
-
-            </div>
 
             <div class="form-row">
                 <div class="col-md mb-3">

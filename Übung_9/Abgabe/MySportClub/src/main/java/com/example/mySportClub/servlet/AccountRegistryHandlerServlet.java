@@ -18,7 +18,7 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
     private final List<User> userEntries = new ArrayList<User>();
 
     public void init() {
-        userEntries.add(new User("user", "pass", "Jon", "Doe"));
+        this.userEntries.add(new User("user", "pass", "Jon", "Doe"));
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -27,7 +27,7 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
         if (userId != null) {
             boolean userExist = false;
 
-            for (User user: userEntries) {
+            for (User user: this.userEntries) {
                 if (Objects.equals(user.userId(), userId)) {
                     userExist = true;
                 }
@@ -42,7 +42,7 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
                 String lastName = request.getParameter("lastName");
 
                 if (password != null && firstName != null && lastName != null) {
-                    userEntries.add(new User(userId, password, firstName, lastName));
+                    this.userEntries.add(new User(userId, password, firstName, lastName));
 
                     // in our hotelSoftwareProject we call beans as forms
                     session.setAttribute("registry", new AccountRegistryForm(userId, "User registry successful.", true, userExist));
@@ -50,6 +50,8 @@ public class AccountRegistryHandlerServlet extends HttpServlet {
                     session.setAttribute("registry", new AccountRegistryForm(userId, "User registry failed.", false, userExist));
                 }
             }
+
+            session.setAttribute("users", this.userEntries);
 
             response.sendRedirect("welcome.jsp");
         }
