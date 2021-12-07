@@ -73,13 +73,13 @@ public class GuestBookServlet extends HttpServlet {
                 "                <a class='nav-link' href='./home.html'>Home <span class='sr-only'>(current)</span></a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
-                "                <a class='nav-link' href='clubs/climbing_club.html'>Climbing</a>" +
+                "                <a class='nav-link' href='loginHandler?dispatchto=clubs/climbing_club.html'>Climbing</a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
-                "                <a class='nav-link' href='clubs/cycling_club.html'>Cycling</a>" +
+                "                <a class='nav-link' href='loginHandler?dispatchto=clubs/cycling_club.html'>Cycling</a>" +
                 "            </li>" +
                 "            <li class='nav-item'>" +
-                "                <a class='nav-link' href='clubs/friendlyFire_eSport_club.html'>Friendly Fire</a>" +
+                "                <a class='nav-link' href='loginHandler?dispatchto=clubs/friendlyFire_eSport_club.html'>Friendly Fire</a>" +
                 "            </li>" +
                 "        </ul>" +
 

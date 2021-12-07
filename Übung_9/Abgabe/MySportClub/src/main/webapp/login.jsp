@@ -58,13 +58,14 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./clubs/climbing_club.html">Climbing</a>
+                <a class="nav-link" href="loginHandler?dispatchto=./clubs/climbing_club.html">Climbing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./clubs/cycling_club.html">Cycling</a>
+                <a class="nav-link" href="loginHandler?dispatchto=./clubs/cycling_club.html">Cycling</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./clubs/friendlyFire_eSport_club.html">Friendly Fire</a>
+                <a class="nav-link" href="loginHandler?dispatchto=./clubs/friendlyFire_eSport_club.html">Friendly
+                    Fire</a>
             </li>
         </ul>
 
@@ -102,25 +103,38 @@
 
     <!-- overview/main information -->
     <div class="container">
+        <c:set var="loginMade" value="${sessionScope.login != null}"/>
+        <c:set var="validLogin" value="${loginMade && sessionScope.login.validLogin}"/>
+
         <form action="loginHandler"
               method="post"
-              novalidate>
+              novalidate
+        >
 
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="userID">Your User-ID *</label>
-                    <input type="text" class="form-control" name="userID" id="userID">
+                    <input type="text" class="form-control ${loginMade ? (validLogin ? 'is-valid' : 'is-invalid') : ''}" name="userID"
+                           id="userID">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="col-md mb-3">
                     <label for="password">Password *</label>
-                    <input type="password" class="form-control" name="password" id="password">
+                    <input type="password" class="form-control ${loginMade ? (validLogin ? 'is-valid' : 'is-invalid') : ''}" name="password" id="password">
                 </div>
             </div>
 
-            <%-- implement error field if login credentials are false --%>
+            <c:if test="${loginMade && !sessionScope.login.validLogin}">
+                <div class="form-row">
+                    <div class="col-md mb-3">
+                        <p class="redText">
+                            Username or password wrong.
+                        </p>
+                    </div>
+                </div>
+            </c:if>
 
             <button class="btn my-btn-primary" type="submit">Login</button>
         </form>
