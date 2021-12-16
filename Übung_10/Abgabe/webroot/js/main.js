@@ -13,27 +13,39 @@ $(document).ready(function () {
 
     // fetch events from XML using rss2json
     $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.festivalticker.de%2Frss-festivalfeed%2Ffestivalkalender1-60.xml', function (response) {
+
         // create HTML elements based on response items
         $.each(response.items, function (index, item) {
+
             const regExp = /Ort: \d+ ([\wöäüÖÄÜß ]*)<br>Land: ([\wöäüÖÄÜß ]*)/gm;
             const match = regExp.exec(item.description);
 
-            const event = $('<div>');
-            event.html(`<h2>${item.title}</h2><p>${item.description}</p></div><hr>`);
+            // create element
+            let html = "";
+            html += "<div id='events_" + index + "'>";
+            html += "<h2>" + item.title + "</h2>";
+            html += "<p>" + item.description + "</p>";
+            html += "</div><hr>";
 
+            $('#events').append(html);
+
+            // add events
+            let $event = $("#event_" + index);
             if (match) {
-                event.attr('event', index);
-
-                event.on('click', function () {
-                    if (typeof eventMarkerCoordinates[index] === 'undefined') {
-                        addEventMarker(map, eventMarkers, eventMarkerCoordinates, index, item.title, `${match[1]} ${match[2]}`);
+                $event.on('click', function () {
+                    // if not cached yet, save it in local variable
+                    if (eventMarkers[index] == null || eventMarkerCoordinates[index] == null) {
+                        addEventMarker(map, eventMarkers, eventMarkerCoordinates, index, item.title, {
+                            city: match[1],
+                            country: match[2]
+                        });
                     } else {
                         eventMarkers[index].openPopup();
                         map.flyTo(eventMarkerCoordinates[index], 12);
                     }
                 });
             } else {
-                event.click(function () {
+                $event.on("click", function () {
                     let $this = $(this);
 
                     $this.css('background-color', '#ff958c')
@@ -42,25 +54,30 @@ $(document).ready(function () {
                     }, 250);
                 });
             }
-
-            $('#events').append(event);
         });
     });
 });
 
 function addEventMarker(map, eventMarkers, eventMarkerCoordinates, eventId, title, location) {
-    $.get(`https://nominatim.openstreetmap.org/search?q=${location}&limit=1&format=json&addressdetails=1`, function (response) {
+    let url = "https://nominatim.openstreetmap.org/search?q=" + location.city + "%20" + location.country + "&limit=1&format=json&addressdetails=1";
+
+    $.get(url, function (response) {
+
         // get coordinates from response
-        const latitude = response[0].lat;
-        const longitude = response[0].lon;
+        let mapCoords = response[0];
 
-        const eventMarker = L.marker([latitude, longitude]).addTo(map);
+        if (mapCoords != null) {
+            const latitude = mapCoords.lat;
+            const longitude = mapCoords.lon;
 
-        eventMarker.bindPopup(`<b>${title}</b>`).openPopup();
-        map.flyTo([latitude, longitude], 12);
+            const eventMarker = L.marker([latitude, longitude]).addTo(map);
 
-        // save marker and marker coordinates for later usage
-        eventMarkers[eventId] = eventMarker;
-        eventMarkerCoordinates[eventId] = [latitude, longitude];
+            eventMarker.bindPopup("<b>" + title + "</b>").openPopup();
+            map.flyTo([latitude, longitude], 12);
+
+            // save marker and marker coordinates for later usage
+            eventMarkers[eventId] = eventMarker;
+            eventMarkerCoordinates[eventId] = [latitude, longitude];
+        }
     });
 }
