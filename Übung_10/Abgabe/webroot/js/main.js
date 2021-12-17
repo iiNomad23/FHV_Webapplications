@@ -22,7 +22,7 @@ $(document).ready(function () {
 
             // create element
             let html = "";
-            html += "<div id='events_" + index + "'>";
+            html += "<div id='event_" + index + "'>";
             html += "<h2>" + item.title + "</h2>";
             html += "<p>" + item.description + "</p>";
             html += "</div><hr>";
