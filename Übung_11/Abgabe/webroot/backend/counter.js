@@ -21,7 +21,9 @@ const server = http.createServer(function (req, res) {
             .on('end', () => {
                 let parsedJSON = JSON.parse(body);
                 if (parsedJSON.hasOwnProperty("string")) {
-                    res.end(JSON.stringify({characterCount: parsedJSON.string.length}));
+                    res.end(
+                        JSON.stringify({characterCount: parsedJSON.string.length})
+                    );
                 }
             });
     } else {
