@@ -10,25 +10,14 @@ $(document).ready(function () {
             string: $textInput.val(),
         }
 
-        fetch('http://localhost:8080', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+        sendCharacterCount(data).then(
+            (success) => {
+                requestSuccess(success);
             },
-            body: JSON.stringify(data)
-        }).then(response => {
-                response.json()
-                    // set textCounter value according to response
-                    .then((result) => {
-                        if (result != null) {
-                            requestSuccess(result);
-                        }
-                    })
-                    .catch(() => {
-                        requestError("Error Occurred!");
-                    });
+            (/*error*/) => {
+                requestError("Error Occurred!");
             }
-        );
+        )
 
         // with jquery ajax api
         // $.ajax({
@@ -48,8 +37,34 @@ $(document).ready(function () {
     });
 });
 
+function sendCharacterCount(data) {
+    return new Promise((resolve, reject) => {
+        fetch('http://localhost:8080', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        }).then(response => {
+                response.json()
+                    // set textCounter value according to response
+                    .then((result) => {
+                        resolve(result);
+                    })
+                    .catch(() => {
+                        reject();
+                    });
+            }
+        );
+    });
+}
+
 function requestSuccess(data) {
-    $("#textCounter").text(data.characterCount || 0);
+    if (data != null) {
+        $("#textCounter").text(data.characterCount || 0);
+    } else {
+        $("#textCounter").text("Error");
+    }
 }
 
 function requestError(errText) {
