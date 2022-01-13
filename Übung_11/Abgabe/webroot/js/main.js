@@ -10,7 +10,7 @@ $(document).ready(function () {
             string: $textInput.val(),
         }
 
-        sendCharacterCount(data).then(
+        sendCharacterString(data).then(
             (success) => {
                 requestSuccess(success);
             },
@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 });
 
-function sendCharacterCount(data) {
+function sendCharacterString(data) {
     return new Promise((resolve, reject) => {
         fetch('http://localhost:8080', {
             method: 'POST',
