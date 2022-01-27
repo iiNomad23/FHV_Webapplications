@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
-export interface BackendResponse {
+export interface BackendResp {
   ip: string[];
   date: string;
   time: string;
@@ -17,7 +17,7 @@ export class AppComponent {
   title = 'myAngularProject';
 
   date: Date | undefined;
-  serverResponse: BackendResponse | undefined;
+  serverResp: BackendResp | undefined;
 
   constructor(private http: HttpClient) {
     // intentionally empty
@@ -26,6 +26,8 @@ export class AppComponent {
   onDateChange(event: MatDatepickerInputEvent<any>) {
     this.date = event.value;
 
-    this.http.get<BackendResponse>('http://localhost:8080/host-date-info').subscribe(response => this.serverResponse = response);
+    this.http.get<BackendResp>('http://localhost:8080/host-date-info').subscribe((response) => {
+      this.serverResp = response;
+    });
   }
 }

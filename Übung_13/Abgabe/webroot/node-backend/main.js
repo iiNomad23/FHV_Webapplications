@@ -12,15 +12,23 @@ const main = express();
 main.use(express.static(path.join(__dirname, 'public')));
 main.use(cors({origin: '*'}));
 
-// get all IP addresses & send response with date and time
+// get all IP addresses + date and time
 main.get('/host-date-info', function (req, res) {
     const ips = [];
-    for (let i = 0; i < Object.keys(os.networkInterfaces()).length; i++){
-        const netInf = Object.keys(os.networkInterfaces())[i];
 
-        for (let j = 0; j < os.networkInterfaces()[netInf].length; j++){
-            const currInf = os.networkInterfaces()[netInf][j];
-            ips.push(currInf.address);
+    let networkInterfaces = os.networkInterfaces();
+
+    for (let key in networkInterfaces) {
+        const networkInfoArr = networkInterfaces[key];
+
+        if (networkInfoArr != null) {
+            for (let j = 0; j < networkInfoArr.length; j++){
+                const networkInfo = networkInfoArr[j];
+
+                if (networkInfo != null) {
+                    ips.push(networkInfo.address);
+                }
+            }
         }
     }
 
