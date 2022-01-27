@@ -1,4 +1,5 @@
 .idea
 /myTest
-/Übung_11/Abgabe/webroot/package-lock.json
-/Übung_12/Abgabe/webroot/node_modules
+
+package-lock.json
+node_modules
