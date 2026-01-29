@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Assignment_12",
   "dependencies": {
-    "body-parser": "^2.0.1",
-    "express": "^5.0.1"
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1"
   },
   "author": "Marco Prescher",
   "license": "MIT"
